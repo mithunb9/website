@@ -1,31 +1,28 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import Plane from "./components/Plane.vue";
-import About from "./components/About.vue";
-import Project from "./components/Project.vue";
-</script>
-
 <template>
-  <div class="bg-bgblue h-screen">
-    <div>
+  <div class="bg-bgblue grid grid-cols-2 h-screen">
+    <div class="bg-blue-500 col-span-1">
       <div id="header" class="text-txwhite">
-        <h1>Mithun</h1>
-        <h1>Balasubramanian</h1>
+        <div class="pl-10 pt-5 lg:text-[4rem] md:text-[2rem] xs:text-[1rem]">
+          <h1>Mithun</h1>
+          <h1>Balasubramanian</h1>
+        </div>
       </div>
 
-      <div class="ml-5 mt-2">
+      <div class="ml-16 mt-2">
         <div id="tagline">
-          <p class="text-xs text-txyellow">
+          <p
+            class="text-xs text-txyellow mb-4 lg:text-[1.35rem] md-[1rem] xs-[.125rem]"
+          >
             University of Texas at Dallas, 2025
           </p>
         </div>
-        <div id="about" class="mt-2 text-sm">
-          <p>
+        <div id="about" class="mt-4 lg:text-[1.5rem] md-[1rem] xs-[.5rem]">
+          <p class="mb-2">
             Hello, I am currently a junior studying Computer Science at the
             University of Texas at Dallas
           </p>
-          <h2 class="text-lg text-txyellow mt-2">About</h2>
-          <div class="text-sm">
+          <h2 class="text-txyellow mt-2 text-2xl">About</h2>
+          <div>
             <p class="mt-2">
               I'm a hardworking and passionate student pursuing my Bachelor's
               degree with honors in computer science, specializing in software
@@ -83,17 +80,26 @@ import Project from "./components/Project.vue";
           </a>
         </div>
       </div>
+    </div>
 
+    <div class="bg-red-500 col-span-1">
       <div>
         <Project
-          :name="Mithun"
-          :description="Mithuun"
+          :name="'Cotes'"
+          :description="'Cotes is a great project. This is an amazing project. You should definitely hire me. '"
           :langs="['JavaScript', 'Python', 'React.js']"
         />
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import HelloWorld from "./components/HelloWorld.vue";
+import Plane from "./components/Plane.vue";
+import About from "./components/About.vue";
+import Project from "./components/Project.vue";
+</script>
 
 <style scoped>
 .logo {

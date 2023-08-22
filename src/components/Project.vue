@@ -1,9 +1,15 @@
 <template>
   <div>
-    <p>{{ name }}</p>
+    <h1 class="text-3xl text-txyellow">{{ name }}</h1>
     <p>{{ description }}</p>
-    <div v-for="(lang, index) in langs" :key="index" class="flex bg-red-500">
-      <LangLabel :name="lang" />
+    <div class="flex space-x-2">
+      <div
+        v-for="(lang, index) in langs"
+        :key="index"
+        class="bg-[#202F43] rounded"
+      >
+        <LangLabel :name="lang" class="p-[.5rem] text-txyellow" />
+      </div>
     </div>
   </div>
 </template>
