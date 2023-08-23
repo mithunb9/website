@@ -18,7 +18,7 @@
         <p class="text-2xl">{{ project.long }}</p>
         <p class="text-2xl mt-2">
           Visit the project
-          <a href="project.link" class="underline">here!</a>
+          <a :href="project.link" class="underline">here!</a>
         </p>
       </div>
       <div v-else>
