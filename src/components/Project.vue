@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hover:scale-[1.01]">
     <h1 class="text-3xl text-txyellow">{{ name }}</h1>
     <p>{{ description }}</p>
     <div class="flex space-x-2">
