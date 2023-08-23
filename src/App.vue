@@ -18,7 +18,7 @@
         <p class="text-2xl">{{ project.long }}</p>
         <p class="text-2xl mt-2">
           Visit the project
-          <a :href="project.link" class="underline">here!</a>
+          <a :href="project.link" class="underline" target="_blank">here!</a>
         </p>
       </div>
       <div v-else>
@@ -85,7 +85,7 @@ projects = [
       "Web app that allows you to check your status with my school's chapter of NHS.",
     long: "NHS Status Tracker is a web app that interfaces with Google Sheets to simplify the process to check membership status and standing with my school's chapter of NHS. This project greatly simplified the experience of members and officers by streamlining the process of checking standing with the organization.",
     langs: ["JavaScript", "Next.js", "Node.js", "REST API"],
-    link: "",
+    link: "https://nhssystem.vercel.app/",
   },
 ];
 
