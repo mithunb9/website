@@ -20,10 +20,12 @@
       <div v-else>
         <About @mouseover="stophover" />
       </div>
+
+      <Icons class="ml-16 absolute top-[100%] -mt-16 scale-[1.2]" />
     </div>
 
     <div class="col-span-1">
-      <div class="pt-40">
+      <div class="pt-48">
         <!-- turn this into a for loop-->
         <div v-for="(project, index) in projects" :key="index">
           <Project
@@ -36,12 +38,15 @@
         </div>
       </div>
     </div>
+
+    <div class="fixed w-[12.5rem] mt-10 left-[100%] -ml-[17.5rem]">
+      <img src="./assets/logo.png" />
+    </div>
   </div>
 </template>
 
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import Plane from "./components/Plane.vue";
+import Icons from "./components/Icons.vue";
 import About from "./components/About.vue";
 import Project from "./components/Project.vue";
 import { ref } from "vue";
