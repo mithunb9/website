@@ -16,6 +16,10 @@
           {{ project.name }}
         </h1>
         <p class="text-2xl">{{ project.long }}</p>
+        <p class="text-2xl mt-2">
+          Visit the project
+          <a href="project.link" class="underline">here!</a>
+        </p>
       </div>
       <div v-else>
         <About @mouseover="stophover" />
@@ -62,16 +66,26 @@ projects = [
   {
     name: "Cotes",
     description:
-      "Cotes is a great project. This is an amazing project. You should definitely hire me. ",
-    long: "Cotes is a great project. This is an amazing project. You should definitely hire me. Cotes is a great project. This is an amazing project. You should definitely hire me. ",
-    langs: ["JavaScript", "Python", "React.js"],
+      "Cotes is a web app that allows CS students to take modular notes integrating both text and code.",
+    long: "Cotes is a modular note taking system similar to Notion that was designed for HackSMU 2022. In addition to being able to implement textual notes, you can insert code segments and run them. This functionality will help students effectively take notes.",
+    langs: ["TypeScript", "Next.js", "Node.js", "MongoDB"],
+    link: "https://github.com/mithunb9/cotes",
   },
   {
-    name: "Not Cotes",
+    name: "Clip!",
     description:
-      "Cotes is a great project. This is an amazing project. You should definitely hire me. ",
-    long: "Cotes is a great project. This is an amazing project. You should definitely hire me. Cotes is a great project. This is an amazing project. You should definitely hire me. ",
-    langs: ["JavaScript", "Python", "React.js"],
+      "Clip! is an interactive educational web app for virtual learning environments.",
+    long: "Clip! is a educational platform similar to Google Classroom designed specifically for virtual learning environments. As a student during the pandemic, I found that there was more that could be done to help faciliate productivity and interaction in virtual learning environments. This project was submitted for OneHacks 2021.",
+    langs: ["JavaScript", "React.js", "Node.js", "Python", "Flask"],
+    link: "https://github.com/KAJMHackathonTeam/clip",
+  },
+  {
+    name: "NHS Status Tracker",
+    description:
+      "Web app that allows you to check your status with my school's chapter of NHS.",
+    long: "NHS Status Tracker is a web app that interfaces with Google Sheets to simplify the process to check membership status and standing with my school's chapter of NHS. This project greatly simplified the experience of members and officers by streamlining the process of checking standing with the organization.",
+    langs: ["JavaScript", "Next.js", "Node.js", "REST API"],
+    link: "",
   },
 ];
 
