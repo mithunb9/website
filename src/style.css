@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Gantari&display=swap");
 
 :root {
   font-family: "Gantari", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
