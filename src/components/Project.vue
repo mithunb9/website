@@ -1,7 +1,7 @@
 <template>
-  <div class="hover:scale-[1.01]">
+  <div class="">
     <h1 class="text-3xl text-txyellow">{{ name }}</h1>
-    <p>{{ description }}</p>
+    <p class="my-2 text-lg">{{ description }}</p>
     <div class="flex space-x-2">
       <div
         v-for="(lang, index) in langs"

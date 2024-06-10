@@ -1,5 +1,5 @@
 <template>
-  <div class="p-[.2rem] rounded text-[.75rem]">
+  <div class="p-[.2rem] rounded textl-lg">
     <p>{{ name }}</p>
   </div>
 </template>
