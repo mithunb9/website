@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-bgblue min-h-screen flex flex-col lg:grid lg:grid-cols-2">
-    <div class="col-span-1 p-4 lg:p-5 lg:pl-10 lg:pt-5 order-1 lg:order-none">
+  <div class="bg-bgblue min-h-screen flex flex-col lg:flex-row">
+    <div class="lg:w-1/2 p-4 lg:p-5 lg:pl-10 lg:pt-5 order-1 lg:order-none">
       <div id="header" class="text-txwhite mb-4 lg:mb-0">
         <div
           class="text-xl sm:text-2xl md:text-4xl lg:text-6xl"
@@ -59,53 +59,55 @@
       </div>
     </div>
 
-    <div class="col-span-1 mt-8 lg:mt-5 overflow-y-auto px-4 lg:px-0 lg:mr-16 order-2 lg:order-none custom-scrollbar">
-      <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-        Arrivals <span class="text-gray-500">//About</span>
-      </h1>
-      <div>
-        <div class="hover:bg-[#F5F9FD05] p-2 rounded-lg pb-4">
-          <div @mouseover="stophover">
-            <h2 class="text-txyellow text-xl font-bold">Mithun Balasubramanian</h2>
-            <p class="text-txwhite mt-2">Hi! My name is Mithun. Hover over this to learn more about me!</p>
+    <div class="lg:w-1/2 h-screen overflow-y-auto relative">
+      <div class="px-4 lg:px-0 lg:mr-16">
+        <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
+          Arrivals <span class="text-gray-500">//About</span>
+        </h1>
+        <div>
+          <div class="hover:bg-[#F5F9FD05] p-2 rounded-lg pb-4">
+            <div @mouseover="stophover">
+              <h2 class="text-txyellow text-xl font-bold">Mithun Balasubramanian</h2>
+              <p class="text-txwhite mt-2">Hi! My name is Mithun. Hover over this to learn more about me!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Work Experience section -->
-      <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-        Connections <span class="text-gray-500">//Work Experience</span>
-      </h1>
-      <div>
-        <WorkExperience
-          v-for="exp in workExperience"
-          :key="exp.title"
-          :experience="exp"
-          @mouseover="hoverExperience"
-        />
-      </div>
+        <!-- Work Experience section -->
+        <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
+          Connections <span class="text-gray-500">//Work Experience</span>
+        </h1>
+        <div>
+          <WorkExperience
+            v-for="exp in workExperience"
+            :key="exp.title"
+            :experience="exp"
+            @mouseover="hoverExperience"
+          />
+        </div>
 
-      <!-- Projects section -->
-      <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-        Projects <span class="text-gray-500">//Personal</span>
-      </h1>
-      <div>
-        <Project
-          v-for="project in projects"
-          :key="project.name"
-          :name="project.name"
-          :short="project.short"
-          :langs="project.langs"
-          @mouseover="hover(project.name)"
-        />
+        <!-- Projects section -->
+        <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
+          Projects <span class="text-gray-500">//Personal</span>
+        </h1>
+        <div>
+          <Project
+            v-for="project in projects"
+            :key="project.name"
+            :name="project.name"
+            :short="project.short"
+            :langs="project.langs"
+            @mouseover="hover(project.name)"
+          />
+        </div>
       </div>
+      <Plane />
     </div>
 
     <div class="fixed w-16 sm:w-20 lg:w-32 top-4 right-4">
       <img src="./assets/logo.png" alt="Logo" />
     </div>
   </div>
-  <Plane />
 </template>
 
 <script setup>
@@ -198,8 +200,7 @@ const stophover = () => {
 
 <style scoped>
 @media (max-width: 1023px) {
-  .lg\:grid {
-    display: flex;
+  .lg\:flex-row {
     flex-direction: column;
   }
 }

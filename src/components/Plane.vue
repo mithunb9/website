@@ -12,23 +12,32 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const scrollPercentage = ref(0);
 
 const updateScrollPosition = () => {
-  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-  scrollPercentage.value = (window.scrollY / scrollableHeight) * 100;
+  const container = document.querySelector('.lg\\:w-1\\/2.h-screen.overflow-y-auto');
+  if (container) {
+    const scrollableHeight = container.scrollHeight - container.clientHeight;
+    scrollPercentage.value = (container.scrollTop / scrollableHeight) * 100;
+  }
 };
 
 onMounted(() => {
-  window.addEventListener('scroll', updateScrollPosition);
+  const container = document.querySelector('.lg\\:w-1\\/2.h-screen.overflow-y-auto');
+  if (container) {
+    container.addEventListener('scroll', updateScrollPosition);
+  }
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', updateScrollPosition);
+  const container = document.querySelector('.lg\\:w-1\\/2.h-screen.overflow-y-auto');
+  if (container) {
+    container.removeEventListener('scroll', updateScrollPosition);
+  }
 });
 </script>
 
 <style scoped>
 .plane-icon {
   position: fixed;
-  right: 2rem;
+  right: 1rem;
   z-index: 1000;
   transition: top 0.1s ease-out;
 }
