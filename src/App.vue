@@ -25,7 +25,7 @@
             <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold">Departures <span class="text-gray-500">//About</span></h1>
             <div id="about" class="mt-4 lg:text-[1.5rem] md-[1rem] xs-[.5rem]">
               <p class="mb-2">
-                Hello, I am currently a junior studying Computer Science at the University of Texas at Dallas
+                Hello, I am currently a senior studying Computer Science at the University of Texas at Dallas
               </p>
               <h2 class="text-txyellow mt-2 text-2xl font-bold">About</h2>
               <div>
