@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-bgblue grid lg:grid-cols-2 h-screen">
-    <div class="col-span-1 p-5 lg:pl-10 lg:pt-5">
-      <div id="header" class="text-txwhite">
+  <div class="bg-bgblue min-h-screen flex flex-col lg:grid lg:grid-cols-2">
+    <div class="col-span-1 p-4 lg:p-5 lg:pl-10 lg:pt-5 order-1 lg:order-none">
+      <div id="header" class="text-txwhite mb-4 lg:mb-0">
         <div
-          class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl"
+          class="text-xl sm:text-2xl md:text-4xl lg:text-6xl"
           @mouseover="stophover"
         >
           <h1 class="-mb-2">Mithun</h1>
@@ -11,7 +11,9 @@
         </div>
       </div>
 
-      <div class="pt-5 w-full sm:w-10/12 lg:ml-16">
+      <Icons class="mb-4 lg:mb-0 lg:fixed lg:bottom-4 lg:left-4 transform scale-110" />
+
+      <div class="pt-5 w-full lg:w-10/12 lg:ml-16">
         <template v-if="hoverStatus">
           <h1 class="text-txyellow mt-2 text-xl sm:text-2xl font-bold pb-2">
             {{ project.name || experience.title }}
@@ -29,9 +31,7 @@
         </template>
         <template v-else>
           <div>
-            <h1
-              class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold"
-            >
+            <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold">
               Departures <span class="text-gray-500">//About</span>
             </h1>
             <div id="about" class="mt-4 lg:text-[1.5rem] md-[1rem] xs-[.5rem]">
@@ -57,21 +57,18 @@
           </div>
         </template>
       </div>
-
-      <Icons class="absolute bottom-4 left-4 sm:left-16 transform scale-110" />
     </div>
 
-    <div class="col-span-1 mt-48 overflow-y-scroll overflow-hidden mr-16">
+    <div class="col-span-1 mt-8 lg:mt-5 overflow-y-auto px-4 lg:px-0 lg:mr-16 order-2 lg:order-none custom-scrollbar">
       <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
         Arrivals <span class="text-gray-500">//About</span>
       </h1>
       <div>
         <div class="hover:bg-[#F5F9FD05] p-2 rounded-lg pb-4">
-          <Project
-            name="Mithun Balasubramanian"
-            description="Hi! My name is Mithun. Hover over this to learn more about me!"
-            @mouseover="stophover"
-          />
+          <div @mouseover="stophover">
+            <h2 class="text-txyellow text-xl font-bold">Mithun Balasubramanian</h2>
+            <p class="text-txwhite mt-2">Hi! My name is Mithun. Hover over this to learn more about me!</p>
+          </div>
         </div>
       </div>
 
@@ -104,16 +101,18 @@
       </div>
     </div>
 
-    <div class="fixed w-20 sm:w-32 top-4 right-4">
-      <img src="./assets/logo.png" />
+    <div class="fixed w-16 sm:w-20 lg:w-32 top-4 right-4">
+      <img src="./assets/logo.png" alt="Logo" />
     </div>
   </div>
+  <Plane />
 </template>
 
 <script setup>
 import Icons from "./components/Icons.vue";
 import Project from "./components/Project.vue";
 import WorkExperience from "./components/WorkExperience.vue";
+import Plane from "./components/Plane.vue";
 import { ref } from "vue";
 
 const hoverStatus = ref(false);
@@ -198,9 +197,19 @@ const stophover = () => {
 </script>
 
 <style scoped>
-@media (max-width: 768px) {
-  .grid-cols-2 {
-    grid-template-columns: 1fr;
+@media (max-width: 1023px) {
+  .lg\:grid {
+    display: flex;
+    flex-direction: column;
   }
+}
+
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 </style>
