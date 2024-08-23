@@ -1,0 +1,33 @@
+[
+  {
+    "name": "This Website",
+    "short": "This website is built using Vue.js, Tailwind CSS, and hosted on Vercel.",
+    "long": "This website is built using Vue.js, Tailwind CSS, and hosted on Vercel. This is a place for me to showcase my projects and experiences. Thank you for visiting!",
+    "langs": ["Vue.js", "Tailwind CSS", "Vercel"],
+    "source": "https://github.com/mithunb9/website",
+    "link": "https://www.mithunb.com"
+  },
+  {
+    "name": "Cotes",
+    "short": "Cotes is a web app that allows CS students to take modular notes integrating both text and code.",
+    "long": "Cotes is a modular note-taking system similar to Notion that was designed for HackSMU 2022. In addition to being able to implement textual notes, you can insert code segments and run them. This functionality will help students effectively take notes.",
+    "langs": ["TypeScript", "Next.js", "Node.js", "MongoDB"],
+    "source": "https://github.com/mithunb9/cotes",
+    "link": "https://cotes.mithunb.com/"
+  },
+  {
+    "name": "Clip!",
+    "short": "Clip! is an interactive educational web app for virtual learning environments.",
+    "long": "Clip! is an educational platform similar to Google Classroom designed specifically for virtual learning environments. As a student during the pandemic, I found that there was more that could be done to help facilitate productivity and interaction in virtual learning environments. This project was submitted for OneHacks 2021.",
+    "langs": ["JavaScript", "React.js", "Node.js", "Python", "Flask"],
+    "link": "https://github.com/KAJMHackathonTeam/clip"
+  },
+  {
+    "name": "NHS Status Tracker",
+    "short": "Web app that allows you to check your status with my school's chapter of NHS.",
+    "long": "NHS Status Tracker is a web app that interfaces with Google Sheets to simplify the process to check membership status and standing with my school's chapter of NHS. This project greatly simplified the experience of members and officers by streamlining the process of checking standing with the organization.",
+    "langs": ["JavaScript", "Next.js", "Node.js", "REST API"],
+    "source": "https://github.com/mithunb9/nhs-status-tracker",
+    "link": "https://nhssystem.vercel.app/"
+  }
+]
