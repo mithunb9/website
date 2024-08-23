@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <Icons class="mb-4 lg:mb-0 lg:fixed lg:bottom-4 lg:left-4 transform scale-110" />
+      <Icons class="mb-4 lg:mb-0 lg:fixed lg:bottom-8 lg:left-8 transform scale-110" />
 
       <div class="pt-5 w-full lg:w-10/12 lg:ml-16">
         <template v-if="hoverStatus">
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="lg:w-1/2 h-screen overflow-y-auto relative">
+    <div class="lg:w-1/2 h-screen overflow-y-auto relative custom-scrollbar">
       <div class="px-4 lg:px-0 lg:mr-16">
         <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
           Arrivals <span class="text-gray-500">//About</span>
