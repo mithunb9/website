@@ -40,7 +40,7 @@
         <template v-else>
           <div>
             <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold">
-              Departures <span class="text-gray-500">//About</span>
+              Departures <span class="text-gray-500">// About</span>
             </h1>
             <div id="about" class="mt-4 lg:text-[1.5rem] md:text-[1rem] text-[.5rem]">
               <p class="mb-2">
@@ -70,7 +70,7 @@
     <div class="lg:w-1/2 h-screen overflow-y-auto relative custom-scrollbar">
       <div class="px-4 lg:px-0 lg:mr-16">
         <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-          Arrivals <span class="text-gray-500">//About</span>
+          Arrivals <span class="text-gray-500">// About</span>
         </h1>
         <div>
           <div class="hover:bg-[#F5F9FD05] p-2 rounded-lg pb-4">
@@ -83,7 +83,7 @@
 
         <!-- Work Experience section -->
         <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-          Connections <span class="text-gray-500">//Work Experience</span>
+          Connections <span class="text-gray-500">// Work Experience</span>
         </h1>
         <div>
           <WorkExperience
@@ -96,7 +96,7 @@
 
         <!-- Projects section -->
         <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-          Projects <span class="text-gray-500">//Personal</span>
+          Projects <span class="text-gray-500">// Personal</span>
         </h1>
         <div>
           <Project
@@ -163,6 +163,8 @@ const stophover = () => {
 .custom-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  height: 95vh;
+  margin: 2.5vh 0;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
