@@ -20,7 +20,7 @@
     "short": "Clip! is an interactive educational web app for virtual learning environments.",
     "long": "Clip! is an educational platform similar to Google Classroom designed specifically for virtual learning environments. As a student during the pandemic, I found that there was more that could be done to help facilitate productivity and interaction in virtual learning environments. This project was submitted for OneHacks 2021.",
     "langs": ["JavaScript", "React.js", "Node.js", "Python", "Flask"],
-    "link": "https://github.com/KAJMHackathonTeam/clip"
+    "source": "https://github.com/KAJMHackathonTeam/clip"
   },
   {
     "name": "NHS Status Tracker",
