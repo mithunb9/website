@@ -96,7 +96,7 @@
 
         <!-- Projects section -->
         <h1 class="text-txyellow text-2xl sm:text-4xl lg:text-4xl font-bold py-2">
-          Projects <span class="text-gray-500">// Personal</span>
+          Departures <span class="text-gray-500">// Projects</span>
         </h1>
         <div>
           <Project
